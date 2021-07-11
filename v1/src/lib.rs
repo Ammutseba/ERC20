@@ -155,8 +155,8 @@ decl_storage! {
 		pub Ticker get(fn get_ticker): Vec::<u8>;
 		pub Minted get(fn get_mint): bool = false;
 		pub Name get(fn get_name): Vec::<u8>;
-		Balances get(fn balances): map hasher(blake2_128_concat) T::AccountId => u64;
-		Allowances get(fn allowances): double_map hasher(blake2_128_concat) T::AccountId, hasher(blake2_128_concat) T::AccountId => u64;
+		pub Balances get(fn balances): map hasher(blake2_128_concat) T::AccountId => u64;
+		pub Allowances get(fn allowances): double_map hasher(blake2_128_concat) T::AccountId, hasher(blake2_128_concat) T::AccountId => u64;
 	}
 }
 
