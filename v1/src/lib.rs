@@ -122,7 +122,7 @@ decl_module! {
 			Ok(())
 		}
 
-		//Allows spender to withdraw from your account multiple times, up to the value amount.
+		//Allows spender 'to' to withdraw from your account multiple times, up to the value amount.
 		//If this function is called again it overwrites the current allowance with value.
 		#[weight = 10_000]
 		fn approve(origin, to: T::AccountId, value: u64) -> DispatchResult {
@@ -134,7 +134,7 @@ decl_module! {
 			Ok(())
 		}
 
-		//Returns the amount which spender is still allowed to withdraw from owner.
+		//Returns the amount which spender 'to' is still allowed to withdraw from owner.
 		#[weight = 10_000]
 		fn allowance(origin, to: T::AccountId) -> DispatchResult {
 			let user = ensure_signed(origin)?;
